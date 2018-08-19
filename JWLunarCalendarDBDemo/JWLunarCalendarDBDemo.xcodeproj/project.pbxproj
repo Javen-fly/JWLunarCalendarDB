@@ -16,6 +16,7 @@
 		A67E7E902068946000C7BC6A /* JWLunarCalendarDB.m in Sources */ = {isa = PBXBuildFile; fileRef = A67E7E8E2068946000C7BC6A /* JWLunarCalendarDB.m */; };
 		A67E7E952068965200C7BC6A /* JWSolarDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A67E7E912068965200C7BC6A /* JWSolarDate.m */; };
 		A67E7E962068965200C7BC6A /* JWLunarDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A67E7E922068965200C7BC6A /* JWLunarDate.m */; };
+		A6BFFBB321291B9A006ADA20 /* JWDateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BFFBB121291B99006ADA20 /* JWDateUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		A67E7E922068965200C7BC6A /* JWLunarDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLunarDate.m; sourceTree = "<group>"; };
 		A67E7E932068965200C7BC6A /* JWLunarDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLunarDate.h; sourceTree = "<group>"; };
 		A67E7E942068965200C7BC6A /* JWSolarDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSolarDate.h; sourceTree = "<group>"; };
+		A6BFFBB121291B99006ADA20 /* JWDateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDateUtil.m; sourceTree = "<group>"; };
+		A6BFFBB221291B99006ADA20 /* JWDateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDateUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 		A67E7E8D206893B900C7BC6A /* JWLunarCalendarDB */ = {
 			isa = PBXGroup;
 			children = (
+				A6BFFBB221291B99006ADA20 /* JWDateUtil.h */,
+				A6BFFBB121291B99006ADA20 /* JWDateUtil.m */,
 				A67E7E932068965200C7BC6A /* JWLunarDate.h */,
 				A67E7E922068965200C7BC6A /* JWLunarDate.m */,
 				A67E7E942068965200C7BC6A /* JWSolarDate.h */,
@@ -169,6 +174,7 @@
 				A67E7E7C2068939300C7BC6A /* ViewController.m in Sources */,
 				A67E7E872068939300C7BC6A /* main.m in Sources */,
 				A67E7E902068946000C7BC6A /* JWLunarCalendarDB.m in Sources */,
+				A6BFFBB321291B9A006ADA20 /* JWDateUtil.m in Sources */,
 				A67E7E952068965200C7BC6A /* JWSolarDate.m in Sources */,
 				A67E7E792068939300C7BC6A /* AppDelegate.m in Sources */,
 				A67E7E962068965200C7BC6A /* JWLunarDate.m in Sources */,
