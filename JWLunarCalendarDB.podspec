@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JWLunarCalendarDB"
-  s.version      = "1.0.1"
+  s.version      = "1.0.3"
   s.summary      = "LunarCalendar Data"
   s.homepage     = "https://github.com/Javen-fly/JWLunarCalendarDB"
   s.license      = "MIT"
