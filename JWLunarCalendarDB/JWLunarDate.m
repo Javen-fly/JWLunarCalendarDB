@@ -7,7 +7,6 @@
 //
 
 #import "JWLunarDate.h"
-#import "JWLunarCalendarDB.h"
 
 @implementation JWLunarDate
 
@@ -21,22 +20,11 @@
     return date;
 }
 
-
-- (void)setDay:(NSInteger)day
+- (void)setYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day isLeap:(BOOL)isLeap
 {
-    _day = day;
-    _dayStr = [JWLunarCalendarDB lunarDayStrWithDayIndex:day];
-}
-
-- (void)setMonth:(NSInteger)month
-{
-    _month      = month;
-    _monthStr   = [JWLunarCalendarDB lunarMonthStrWithMonthIndex:month isLeap:_isLeap];
-}
-
-- (void)setIsLeap:(BOOL)isLeap
-{
-    _isLeap     = isLeap;
-    _monthStr   = [JWLunarCalendarDB lunarMonthStrWithMonthIndex:_month isLeap:isLeap];
+    _year   = year;
+    _month  = month;
+    _day    = day;
+    _isLeap = isLeap;
 }
 @end

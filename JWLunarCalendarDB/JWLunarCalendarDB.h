@@ -12,7 +12,7 @@
 
 #define kMinYear        1901
 #define kYearDruation   200
-#define kMaxYear        (kMinYear + kYearDruation)
+
 @interface JWLunarCalendarDB : NSObject
 
 /** 查询农历某年的月数 */
@@ -37,8 +37,6 @@
 + (JWLunarDate *)solarToLunar:(JWSolarDate *)date;
 /** 农历转公历 */
 + (JWSolarDate *)lunarToSolar:(JWLunarDate *)date;
-/** 根据数字转换成农历表示月份 */
-+ (NSString *)lunarMonthStrWithMonthIndex:(NSInteger)month isLeap:(BOOL)isLeap;
-/** 根据数字转换成农历表示日 */
-+ (NSString *)lunarDayStrWithDayIndex:(NSInteger)day;
+/** 自定义date转NSDate */
++ (NSDate *)solarToDate:(JWSolarDate *)date;
 @end

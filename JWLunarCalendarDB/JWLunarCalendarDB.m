@@ -8,6 +8,8 @@
 
 #import "JWLunarCalendarDB.h"
 #import <objc/message.h>
+#import "JWSolarDate.h"
+#import "JWLunarDate.h"
 
 static __inline__ __attribute__((always_inline)) NSArray* heavenlyStem()
 {
@@ -242,22 +244,19 @@ long GetDateData(long year, long month, long day)
     [dateformatter setDateFormat:@"yyyy-MM-dd"];
     NSDate *firstDate = [dateformatter dateFromString:[NSString stringWithFormat:@"%04zd-%02zd-%02zd",year, month, day]];
     NSDate *todayDate = [firstDate dateByAddingTimeInterval:days * 24 * 3600];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
     
-    JWSolarDate *solarDate = [JWSolarDate dateWithDate:todayDate];
+    JWSolarDate *solarDate = [JWSolarDate new];
+    solarDate.year  = [calendar component:NSCalendarUnitYear fromDate:todayDate];
+    solarDate.month = [calendar component:NSCalendarUnitMonth fromDate:todayDate];
+    solarDate.day   = [calendar component:NSCalendarUnitDay fromDate:todayDate];
     return solarDate;
 }
 
-+ (NSString *)lunarMonthStrWithMonthIndex:(NSInteger)month isLeap:(BOOL)isLeap
++ (NSDate *)solarToDate:(JWSolarDate *)date
 {
-    NSString *monthStr = lunarMonth()[month-1];
-    if (isLeap) {
-        monthStr = [@"闰" stringByAppendingString:monthStr];
-    }
-    return monthStr;
-}
-
-+ (NSString *)lunarDayStrWithDayIndex:(NSInteger)day
-{
-    return monthDay()[day-1];
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc]init];
+    [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    return [dateformatter dateFromString:[NSString stringWithFormat:@"%04zd-%02zd-%02zd %02zd:%02zd:%02zd",date.year,date.month,date.day,date.hour,date.minute,date.second]];
 }
 @end

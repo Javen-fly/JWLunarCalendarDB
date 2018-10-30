@@ -23,5 +23,5 @@
 
 + (instancetype)dateWithDate:(NSDate *)date;
 + (instancetype)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
-
+- (void)setYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
 @end

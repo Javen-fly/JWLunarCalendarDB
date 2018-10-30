@@ -13,12 +13,9 @@
 
 + (instancetype)dateWithDate:(NSDate *)date
 {
-    JWSolarDate *jw_date    = [JWSolarDate new];
-    NSCalendar *calendar    = [NSCalendar currentCalendar];
-    jw_date.year            = [calendar component:NSCalendarUnitYear fromDate:date];
-    jw_date.month           = [calendar component:NSCalendarUnitMonth fromDate:date];
-    jw_date.day             = [calendar component:NSCalendarUnitDay fromDate:date];
-    return jw_date;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:date];
+    return [self dateWithYear:components.year month:components.month day:components.day];
 }
 
 + (instancetype)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day
@@ -30,6 +27,10 @@
     return date;
 }
 
-
-
+- (void)setYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day
+{
+    _year   = year;
+    _month  = month;
+    _day    = day;
+}
 @end

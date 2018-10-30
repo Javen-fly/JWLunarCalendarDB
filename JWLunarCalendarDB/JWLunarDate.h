@@ -20,5 +20,6 @@
 @property (nonatomic, assign) BOOL isLeap;
 
 + (instancetype)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day isLeap:(BOOL)isLeap;
+- (void)setYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day isLeap:(BOOL)isLeap;
 
 @end

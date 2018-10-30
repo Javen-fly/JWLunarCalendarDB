@@ -31,7 +31,7 @@
     NSInteger year  = 0;
     NSInteger month = 0;
     NSInteger day   = 0;
-    if (!_yearTF.text.length || [_yearTF.text integerValue] < kMinYear || [_yearTF.text integerValue] > kMaxYear) {
+    if (!_yearTF.text.length || [_yearTF.text integerValue] < kMinYear || [_yearTF.text integerValue] > kMinYear + kYearDruation) {
         return;
     }
     else if (!_monthTF.text.length || [_monthTF.text integerValue] < 1 || [_monthTF.text integerValue] > 12)
