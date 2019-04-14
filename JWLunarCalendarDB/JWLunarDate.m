@@ -19,8 +19,8 @@
     date.day            = day;
     date.isLeap         = isLeap;
     date.yearStr        = [JWLunarCalendarDB lunarYearWithYear:year];
-    date.monthStr       = [[JWLunarCalendarDB lunarMonthsInYear:year]objectAtIndex:month-1];
-    date.dayStr         = [[JWDateUtil lunarCalendarDayArrWithYear:year month:month]objectAtIndex:day-1];
+    date.monthStr       = [[JWLunarCalendarDB lunarMonthsInYear:year]objectAtIndex:month - 1];
+    date.dayStr         = [[JWDateUtil lunarCalendarDayArrWithYear:year month:month]objectAtIndex:day - 1];
     return date;
 }
 
