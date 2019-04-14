@@ -37,6 +37,9 @@
 + (JWLunarDate *)solarToLunar:(JWSolarDate *)date;
 /** 农历转公历 */
 + (JWSolarDate *)lunarToSolar:(JWLunarDate *)date;
-/** 自定义date转NSDate */
+/** 公历转NSDate */
 + (NSDate *)solarToDate:(JWSolarDate *)date;
+/** 农历转NSDate */
++ (NSDate *)lunarToDate:(JWLunarDate *)date;
+
 @end

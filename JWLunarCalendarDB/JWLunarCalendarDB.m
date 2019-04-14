@@ -259,4 +259,10 @@ long GetDateData(long year, long month, long day)
     [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     return [dateformatter dateFromString:[NSString stringWithFormat:@"%04zd-%02zd-%02zd %02zd:%02zd:%02zd",date.year,date.month,date.day,date.hour,date.minute,date.second]];
 }
+
++ (NSDate *)lunarToDate:(JWLunarDate *)date
+{
+    JWSolarDate *solarDate = [self lunarToSolar:date];
+    return [self solarToDate:solarDate];
+}
 @end
